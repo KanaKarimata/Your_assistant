@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <ul>
+    <li><%= link_to "マイカレンダー", schedules_path %></li>
+    <li><%= link_to "メンバー一覧", users_index_path %></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+  </ul>
+<% end %>

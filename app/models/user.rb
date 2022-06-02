@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :groups, through: :group_users, dependent: :destroy
   # グループチャットのアソシエーション
   has_many :chats, dependent: :destroy
-  
+
   # 自分がフォローする
   has_many :relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
   # 自分がフォローしている人を取得
